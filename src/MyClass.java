@@ -1,12 +1,12 @@
 public final class MyClass{
-    private OtherClass otherClass;
+    private final OtherClass otherClass;
 
-    MyClass(Integer num) {
+    public MyClass(Integer num) {
         this.otherClass = new OtherClass(num);
     }
 
     public OtherClass getOtherClass() {
-      return otherClass;
+      return new OtherClass(otherClass.getNum());
     }
 
 }
